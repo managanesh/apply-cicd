@@ -6,7 +6,7 @@ jdk:
 services:
   - docker
 before_install:
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --PASSWORD-STDIN
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker pull openjdk:8-jdk-alpine
 
 script:
